@@ -22,6 +22,9 @@ class PYIRouter {
   PYIComponent component;
 
   List<PYIRoute> children;
+
+  BuildContext context;
+  RouteSettings settings;
 }
 
 class RouteViewComponent extends PYIComponent {
@@ -37,8 +40,6 @@ class RouteViewComponent extends PYIComponent {
 class RouteView {
   get display {
     PYIRouter prouter = PYIRouter.i();
-    print(prouter.active);
-    print(prouter.component);
     if (prouter.children != null) {
       String path = PYIRouter.i().active;
       PYIRoute route = prouter.children.firstWhere((route) {
@@ -49,6 +50,11 @@ class RouteView {
           return false;
         }
       });
+
+      route.component.componentWillMountBuild(
+        PYIRouter.i().context,
+        PYIRouter.i().settings,
+      );
 
       PYIRouter.i().component = route.component;
       PYIRouter.i().active = path;
@@ -62,6 +68,10 @@ class RouteView {
         component: route.component,
       );
     } else {
+      prouter.component.componentWillMountBuild(
+        PYIRouter.i().context,
+        PYIRouter.i().settings,
+      );
       return RouteViewComponent(
         component: prouter.component,
       );

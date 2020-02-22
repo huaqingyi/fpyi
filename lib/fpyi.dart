@@ -55,6 +55,9 @@ class Fpyi {
     }
 
     WidgetBuilder builder = (BuildContext context) {
+      PYIRouter.i().context = context;
+      PYIRouter.i().settings = settings;
+      route.component.componentWillMountBuild(context, settings);
       return route.component;
     };
     return MaterialPageRoute(builder: builder, settings: settings);
