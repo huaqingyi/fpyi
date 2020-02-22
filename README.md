@@ -20,7 +20,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  fpyi: ^0.0.1
+  fpyi: ^0.0.2
 ```
 
 ## Quick Start
@@ -104,3 +104,4 @@ class Layout extends PYIComponent {
 ```
 
 ### Thinks ...
+* export http_proxy=http://127.0.0.1:1087;export https_proxy=http://127.0.0.1:1087;
