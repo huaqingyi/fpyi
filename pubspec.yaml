@@ -2,7 +2,7 @@ name: fpyi
 description: A new flutter plugin project.
 version: 0.0.1
 author: huaqingyi
-homepage: none
+homepage: https://github.com/huaqingyi/fpyi.git
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
