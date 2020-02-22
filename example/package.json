@@ -1,0 +1,16 @@
+{
+  "name": "fpyi-example",
+  "version": "0.0.2",
+  "description": "fpyi plugins",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "flutter packages pub run build_runner watch --delete-conflicting-outputs"
+  },
+  "author": "huaqingyi",
+  "license": "ISC"
+}

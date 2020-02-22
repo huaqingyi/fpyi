@@ -37,6 +37,8 @@ class RouteViewComponent extends PYIComponent {
 class RouteView {
   get display {
     PYIRouter prouter = PYIRouter.i();
+    print(prouter.active);
+    print(prouter.component);
     if (prouter.children != null) {
       String path = PYIRouter.i().active;
       PYIRoute route = prouter.children.firstWhere((route) {
@@ -59,9 +61,10 @@ class RouteView {
       return RouteViewComponent(
         component: route.component,
       );
+    } else {
+      return RouteViewComponent(
+        component: prouter.component,
+      );
     }
-    return RouteViewComponent(
-      component: Text('Not Found ...'),
-    );
   }
 }

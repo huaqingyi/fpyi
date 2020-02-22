@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:fpyi/fpyi.dart';
 
-class Home extends PYIComponent {
+class Order extends PYIComponent {
   @override
   Widget render(BuildContext context) {
-    return Center(
-      child: Column(
+    return Scaffold(
+      body: Column(
         children: <Widget>[
-          Text('Home ...'),
           FlatButton(
-            child: Text('go test ...'),
+            child: Text('to Carrier'),
             onPressed: () {
-              Navigator.of(context).pushNamed('/test');
+              Navigator.of(context).pushNamed('/transport/carrier');
             },
           ),
         ],
