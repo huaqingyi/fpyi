@@ -1,0 +1,22 @@
+PODS:
+  - Flutter (1.0.0)
+  - fpyi (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - fpyi (from `.symlinks/plugins/fpyi/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  fpyi:
+    :path: ".symlinks/plugins/fpyi/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  fpyi: 5cea4ea9802a9f417dae15f05e5135eb18b74170
+
+PODFILE CHECKSUM: 1b66dae606f75376c5f2135a8290850eeb09ae83
+
+COCOAPODS: 1.8.4
